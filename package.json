@@ -1,19 +1,19 @@
 {
   "name": "@cullyfung/utils",
-  "type": "module",
   "version": "0.0.2",
-  "packageManager": "pnpm@7.17.0",
   "description": "typescript-utils helpers",
-  "author": "Cully Fung <cullyfung@gmail.com>",
+  "keywords": [
+    "utils"
+  ],
   "homepage": "https://github.com/cullyfung/utils#readme",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cullyfung/utils.git"
   },
-  "keywords": [
-    "utils"
-  ],
+  "license": "MIT",
+  "author": "Cully Fung <cullyfung@gmail.com>",
   "sideEffects": false,
+  "type": "module",
   "exports": {
     ".": {
       "types": "./index.d.ts",
@@ -21,7 +21,6 @@
       "import": "./dist/index.mjs"
     }
   },
-  "license": "MIT",
   "main": "dist/index.cjs",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
@@ -36,8 +35,8 @@
     "prepublishOnly": "npm run build",
     "release": "bumpp --commit --push --tag && npm publish",
     "start": "esno src/index.ts",
-    "typecheck": "tsc --noEmit",
-    "test": "vitest"
+    "test": "vitest",
+    "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
     "@rollup/plugin-alias": "^4.0.2",
@@ -56,6 +55,7 @@
     "vite": "^3.2.4",
     "vitest": "^0.25.3"
   },
+  "packageManager": "pnpm@7.17.0",
   "publishConfig": {
     "access": "public"
   }
