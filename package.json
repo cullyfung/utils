@@ -1,8 +1,8 @@
 {
-  "name": "@cully/utils",
+  "name": "@cullyfung/utils",
   "type": "module",
-  "version": "1.0.0",
-  "packageManager": "pnpm@7",
+  "version": "0.0.1",
+  "packageManager": "pnpm@7.17.0",
   "description": "typescript-utils helpers",
   "author": "Cully Fung <cullyfung@gmail.com>",
   "homepage": "https://github.com/cullyfung/utils#readme",
@@ -55,5 +55,8 @@
     "typescript": "^4.9.3",
     "vite": "^3.2.4",
     "vitest": "^0.25.3"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
