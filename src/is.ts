@@ -1,27 +1,27 @@
 import { toString } from './base'
 
 export function isObject(obj: any) {
-  return toString(obj) == '[object Object]'
+  return toString(obj) === '[object Object]'
 }
 
 export function isUndefined(obj: any) {
-  return toString(obj) == '[object Undefined]'
+  return toString(obj) === '[object Undefined]'
 }
 
 export function isNull(obj: any) {
-  return toString(obj) == '[object Null]'
+  return toString(obj) === '[object Null]'
 }
 
 export function isRegex(obj: any) {
-  return toString(obj) == '[object RegExp]'
+  return toString(obj) === '[object RegExp]'
 }
 
 export function isDate(obj: any) {
-  return toString(obj) == '[object Date]'
+  return toString(obj) === '[object Date]'
 }
 
 export function isFunction(obj: any) {
-  return toString(obj) == '[object Function]'
+  return toString(obj) === '[object Function]'
 }
 
 export function isNumber(obj: any) {
@@ -37,7 +37,7 @@ export function isBoolean(obj: any) {
 }
 
 export function isWindow(obj: any) {
-  return typeof window !== 'undefined' && toString(obj) == '[object Window]'
+  return typeof window !== 'undefined' && toString(obj) === '[object Window]'
 }
 
 export function isBrowser(obj: any) {
@@ -49,4 +49,16 @@ export function isBrowser(obj: any) {
 
 export function isArray(obj: any) {
   return Array.isArray(obj)
+}
+
+export function isEmpty(obj: any) {
+  if (isObject(obj)) {
+    return !Object.keys(obj).length
+  }
+
+  if (isArray(obj)) {
+    return obj.length === 0
+  }
+
+  return isNull(obj) || isUndefined(obj) || obj === ''
 }
