@@ -1,3 +1,5 @@
 export * from './base'
 export * from './is'
 export * from './request'
+export * from './compose'
+export * from './pipe'
